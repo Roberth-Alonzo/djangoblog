@@ -88,7 +88,7 @@ WSGI_APPLICATION = 'django_portfolio.wsgi.application'
 
 DATABASES = {
     'default': dj_database_url.config(
-        default=os.environ.get('DATABASE_URL_EXTERNAL'),
+        default=('postgres://djangocrud_5gmh_user:dyk7mcOTlm2fp41QYJnKglpMT7i9dtdE@dpg-cp11m2fjbltc73e5v71g-a.oregon-postgres.render.com/djangocrud_5gmh'),
         conn_max_age=600
     )
 }
