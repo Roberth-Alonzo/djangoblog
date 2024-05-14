@@ -31,10 +31,10 @@
             <div class="card-body">
 
                 <h2><strong>{{project.titles}}</strong></h2>
-                <p>{{project.description|truncatechars:20}}</p>
+                <p>{{project.description}}</p>
 
                 {% if project.url %}
-                <a href="{{project.url}}"class="btn btn-dark rounded-0 btn-sm " target="_blank"> {{project.url}}</a>
+                <a href="{{project.url|truncatechars:20}}"class="btn btn-dark rounded-0 btn-sm " target="_blank"> {{project.url|truncatechars:20}}</a>
                     
                 {% endif %}
             </div>
