@@ -11,9 +11,9 @@
 
     <div class="col-md-8 my-auto">
         <h1><strong>The World of Video Games</strong></h1>
-        <h3> <strong>¡Hola!</strong> Mi nombre es Roberth Alonzo y en esta página encontraras dos apartados dedicados a los videojuegos, espero que la página sea de tu agrado. <strong>¡Gracias por visitarla!</strong> </h3>
-        <p></p>
-        <a href="{% static 'portafolio/Curriculum.pdf' %}" class="btn btn-primary btn-lg my-3"><strong>Download CV</strong></a>
+        <h3> <strong>¡Hola!</strong> En esta página encontraras dos apartados uno dedicado a los videojuegos y el otro dedicado a blogs, espero que la página sea de tu agrado.</h3>
+        <p><strong>¡Gracias por visitar esta página!</strong></p>
+        <a href="{% static 'portafolio/Games.pdf' %}" class="btn btn-primary btn-lg my-3" target="_blank"><strong>Download CV</strong></a>
     </div>   
 </header>
 
@@ -34,7 +34,7 @@
                 <p>{{project.description}}</p>
 
                 {% if project.url %}
-                <a href="{{project.url}}"class="btn btn-dark rounded-0 btn-sm" style="max-width: 200px;"> {{project.url}}</a>
+                <a href="{{project.url}}"class="btn btn-dark rounded-0 btn-sm" target="_blank" style="max-width: 200px;"> {{project.url}}</a>
                     
                 {% endif %}
             </div>
