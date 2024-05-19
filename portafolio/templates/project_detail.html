@@ -1,0 +1,21 @@
+{% extends 'layout.html' %} 
+
+{% block content %}
+
+<div class="text-center">
+    <h1 style="color: black;"><strong>Detalles del Juego</strong></h1>
+
+    <h2 style="color: black;"><strong>{{project.titles}}</strong></h2>
+
+    <img src="{{project.imageProject.url}}" alt="{{project.titles}}" class="img-fluid card-project" />
+</div>
+
+<div class="my-4 contentProject card-project" style="background-color: rgba(0, 0, 0, 0.5); font-size: 1.5em; padding: 20px;">
+    <div class="row my-2 text-center">
+        <h2><strong>Resumen</strong></h2>
+    </div>
+    <p> {{project.contentProject|safe|linebreaksbr}}</p>
+    <p><strong>Precio: </strong>${{project.price}}</p>
+</div>
+
+{% endblock %}

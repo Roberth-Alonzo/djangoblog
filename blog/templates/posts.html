@@ -1,20 +1,24 @@
 {% extends 'layout.html' %} {% block content %}
-<h1><strong>Posts</strong></h1>
+ 
+<div class="row my-4 text-center" style="color: black;">
+  <h1> <strong>My Blogs</strong> </h1>
+  <h2>En esta sección, encontrarás todos los blogs publicados hasta el momento</h2>
+</div>
 
 {% for post in posts %}
 
 <div class="p-3">
-  <div class="card card-body bg-black card-project">
+  <div class="card card-body card-post" style="background-color: rgba(0, 0, 0, 0.5);">
     <div class="row">
       <div class="col-3">
         <img src="{{post.image.url}}" alt="{{post.title}}" class="img-fluid" />
       </div>
       <div class="col-9">
         <h2><strong>{{post.titles}}</strong></h2>
-        <p>{{post.content|striptags|truncatechars:100}}</p>
-        <p>{{post.date|date:'M d Y'|upper}}</p>
+        <p class="content-text" style="font-size: 1.5em;">{{post.content|striptags|truncatechars:100}} </p>
+        <p style="font-size: 1.2em;"> {{post.date|date:'M d Y'|upper}}</p>
 
-        <a href="{% url 'blog:post_detail' post.id %}" class="btn btn-primary">{{post.titles}} </a>
+        <a href="{% url 'blog:post_detail' post.id %}" class="btn btn-primary" style="background-color: black;"><strong>Más Información...</strong></a>
       </div>
     </div>
   </div>

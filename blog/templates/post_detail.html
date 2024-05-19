@@ -2,17 +2,15 @@
 
 {% block content %}
 
-<div class="text-center">
-    <h1><strong>Detalles del Post</strong></h1>
-
-<h2><strong>{{post.titles}}</strong></h2>
-<h3 class="my-2 h5 text-muted">{{post.date|date:'F jS Y'}}</h3>
-
-<img src="{{post.image.url}}" alt="{{post.title}}" class="img-fluid" />
-
-<div class="my-4">
-    <p>{{post.content|safe}}</p>
+<div class="text-center" style="color:black;">
+    <h1><strong>Detalles de la Blog</strong></h1>
+    <h2><strong>{{post.titles}}</strong></h2>
+    <h3 class="my-2 h5 text-muted"><strong>{{post.date|date:'F jS Y'}}</strong></h3>
+    <img src="{{post.image.url}}" alt="{{post.title}}" class="img-fluid card-post" />    
 </div>
+
+<div class="my-4 content card-post" style="background-color: rgba(0, 0, 0, 0.5); color: white; font-size: 1.5em; padding: 20px;">
+    <p>{{post.content|safe|linebreaksbr}}</p>
 </div>
 
 {% endblock %}
