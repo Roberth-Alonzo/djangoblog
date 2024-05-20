@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from .models import Post
 
 def render_posts(request):
-    articulos = Post.objects.all()
+    articulos = Post.objects.all().order_by('id')
     return render(request, 'posts.html', {'posts': articulos})
 
 def post_detail(request, post_id):
