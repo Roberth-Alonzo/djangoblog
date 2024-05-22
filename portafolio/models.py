@@ -6,8 +6,8 @@ class Project(models.Model):
     titles = CharField(max_length=100)
     description = CharField(max_length=250)
     image = ImageField(upload_to="portafolio/image/")
-    url = URLField(blank=True)
-    imageProject = models.ImageField(upload_to= 'portafolio_images/')
-    contentProject = models.TextField()
-    price = models.DecimalField(max_digits=10, decimal_places=2)
+    url = URLField()
+    imageProject = models.ImageField(upload_to= 'portafolio_images/', null=True)
+    contentProject = models.TextField(null=True)
+    price = models.DecimalField(max_digits=10, decimal_places=2, null=True)
     
